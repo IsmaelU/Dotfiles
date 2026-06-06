@@ -15,8 +15,6 @@ bar swaybar_command waybar
 
 # Applications rules
 for_window [app_id="mpv"] floating enable, resize set 960 540
-for_window [app_id="org.pwmt.zathura"] floating enable, resize set 960 540
-# Slack
 for_window [app_id="Electron"] floating enable,
 for_window [app_id="firefox"] floating enable,
 for_window [app_id="imv"] floating enable, resize 960 540

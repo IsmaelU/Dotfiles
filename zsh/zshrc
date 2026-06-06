@@ -2,6 +2,8 @@ macchina
 (cat ~/.cache/wal/sequences &)
 
 export PATH="$PATH:$HOME/.config/scripts"
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 
 # Starship
 export STARSHIP_CONFIG=~/.config/starship/config.toml

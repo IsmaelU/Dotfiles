@@ -763,3 +763,35 @@ window:
 
   # Print all received window events.
   #print_events: false
+# alacritty.yml
+
+colors:
+  # Background and foreground colors
+  primary:
+    background: '0x1a1b26'
+    foreground: '0xc6c8d1'
+
+  # Normal colors
+  normal:
+    black:   '0x1a1b26'
+    red:     '0xe95678'
+    green:   '0x29d398'
+    yellow:  '0xf0c674'
+    blue:    '0x7aa2f7'
+    magenta: '0xad8ee6'
+    cyan:    '0x3e8fb0'
+    white:   '0xc0caf5'
+
+  # Bright colors
+  bright:
+    black:   '0x4d4e59'
+    red:     '0xff75a0'
+    green:   '0x35f6b8'
+    yellow:  '0xffe866'
+    blue:    '0x85a2ff'
+    magenta: '0xb39df3'
+    cyan:    '0x4fb1e2'
+    white:   '0xe0e5ef'
+
+
+

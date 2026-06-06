@@ -1,0 +1,108 @@
+global {
+  # Change the background color
+  background = "#282c34";
+  # Set the panel height
+  panel-size = 30;
+  # Enable padding
+  padding = 5;
+  # Hide the tray
+  tray-position = right;
+}
+
+# Add a separator between modules
+separator {
+  format = " ";
+}
+
+# Date and time module (London timezone)
+datetime {
+  format = "%a, %b %d %H:%M:%S";
+  time-zone = "UTC";  # Updated timezone for London
+  interval = 1;
+  label = " %output";
+}
+
+# System tray
+# You can enable this if you want to show system tray icons
+# tray {
+#   spacing = 5;
+#   padding = 5;
+#   icon-size = 20;
+# }
+
+# CPU module
+cpu {
+  format = "CPU %percentage%";
+  interval = 1;
+  critical-threshold = 90;
+}
+
+# Memory module
+memory {
+  format = "MEM %percentage%";
+  interval = 1;
+  critical-threshold = 90;
+}
+
+# Network module
+network {
+  interface = "wlan0";  # Replace with your network interface
+  format-connected = "NET %essid% %speed%";
+  format-disconnected = "NET ❌";
+  interval = 1;
+}
+
+# Battery module
+battery {
+  format = "BAT %percentage%";
+  interval = 30;
+  status-charging = "";
+  status-full = "";
+  status-discharging = "";
+  status-empty = "";
+  low-threshold = 20;
+  critical-threshold = 10;
+}
+
+# Tray
+tray {
+  spacing = 5;
+  padding = 5;
+  icon-size = 20;
+}
+
+# Volume module (PipeWire)
+#pipewire-pulse {
+ # format = "VOL %volume%";
+  #interval = 1;
+#}
+
+# Task manager module
+taskbar {
+  max-icon-size = 20;
+  spacing = 5;
+  scroll = false;
+  enable-scroll = true;
+}
+
+# Window title module
+title {
+  format = " %title%";
+  max-length = 60;
+  ellipsis = true;
+}
+
+# Layout
+layers {
+  bottom = ["taskbar"];
+  top = [
+    "tray",
+    "pipewire-pulse",
+    "datetime",
+    "cpu",
+    "memory",
+    "network",
+    "battery",
+    "title",
+  ];
+}
